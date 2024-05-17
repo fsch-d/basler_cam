@@ -36,7 +36,7 @@ class MyParamTree(ParameterTree):
                 {'name': 'subtract background', 'type': 'bool', 'value': False},                   
                 {'name': 'z-scale', 'type': 'list',  'values': {"global": 0, "ROI": 1, "manual": 2}, 'value': 0},
                 {'name':'bin-factor', 'type': 'int', 'value':'1'},
-                {'name': 'force grayscale', 'type': 'bool', 'value': False},
+                {'name': 'false-color', 'type': 'bool', 'value': False},
                 {'name':'log-to-file', 'type':'bool', 'value':False},
                 #{'name': 'Layer','expanded':False, 'type': 'group','autoIncrementName':True, 'children': [
                 #{'name': 'LayerType', 'type': 'list', 'values': {"RGB": 0, "LAB": 1, "ChannelWise": 2}, 'value': 0},
@@ -90,7 +90,7 @@ class MyParamTree(ParameterTree):
             elif path[0] == 'general settings':
                 if childName == 'save background': self.saveBgSignal.emit()
                 elif childName == 'subtract background': self.subtBgSignal.emit(data)
-                elif childName == 'force grayscale': self.forceGSSignal.emit(data)
+                elif childName == 'false-color': self.forceGSSignal.emit(data)
                 elif childName == 'z-scale': self.zScaleSignal.emit(data)
                 elif childName == 'bin-factor': self.binFactorSignal.emit(data)
                 elif childName == 'log-to-file':self.logSignal.emit(data)

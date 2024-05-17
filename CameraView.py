@@ -296,9 +296,9 @@ class CameraGrabThread(QThread, QObject):
                 #Image = cv2.flip(Image, 1)
                 img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
-                blue_channel = img[:,:,0]             
-                green_channel = img[:,:,1]             
-                red_channel = img[:,:,2]   
+                #blue_channel = img[:,:,0]             
+                #green_channel = img[:,:,1]             
+                #red_channel = img[:,:,2]   
                 Image = img#0*blue_channel + 0*green_channel + red_channel
                 #resized = cv2.resize(img, (100,100), interpolation = cv2.INTER_AREA)
                 #array = np.asarray(img)

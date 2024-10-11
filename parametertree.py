@@ -34,7 +34,7 @@ class MyParamTree(ParameterTree):
 
     noncamParam = [{'name': 'save background', 'type': 'action'},
                 {'name': 'subtract background', 'type': 'bool', 'value': False},                   
-                {'name': 'z-scale', 'type': 'list',  'values': {"global": 0, "ROI": 1, "manual": 2}, 'value': 0},
+                {'name': 'z-scale', 'type': 'list',  'limits': {"global": 0, "ROI": 1, "manual": 2}, 'value': 0},
                 {'name':'bin-factor', 'type': 'int', 'value':'1'},
                 {'name': 'false-color', 'type': 'bool', 'value': False},
                 {'name':'log-to-file', 'type':'bool', 'value':False},

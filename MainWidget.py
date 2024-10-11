@@ -170,7 +170,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
         if len(self.CameraWorker.camdict) > 0:
-            camBranch = dict(name='device', type='list', values=self.CameraWorker.camdict)
+            camBranch = dict(name='device', type='list', limits=self.CameraWorker.camdict)
             self.w3.camModel.addChild(camBranch)
             model0 = sorted(self.CameraWorker.camdict.keys())
             serial0 = self.CameraWorker.camdict[model0[0]]
